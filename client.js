@@ -82,7 +82,7 @@ prompt.get(prompt_schema, function(err, data) {
 
             return total;
         }, {}),
-        body: JSON.parse(data.body),
+        body: (data.body != '') ? JSON.parse(data.body) : {},
         json: true
     }, function(err, res, body) {
         if (err) {
